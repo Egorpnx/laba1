@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+  //  return Text("AAA");
     return MaterialApp(
       title: 'Flutter App!!',
       theme: ThemeData(
@@ -71,12 +72,22 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         children: [
           
-          Container(
-            width: 200,
-            height: 100,
-            color: Color.fromARGB(255, 34, 79, 116),
-            margin: const EdgeInsets.all(10),
-          ),
+         Container(
+  width: 200,
+  height: 100,
+  color: Color.fromARGB(255, 34, 79, 116),
+  margin: const EdgeInsets.all(10),
+  child: const Center(  
+    child: Text(
+      'Текст',
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  ),
+),
           
          
           
