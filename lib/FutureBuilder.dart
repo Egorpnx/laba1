@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       // to hide debug banner
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.red,
       ),
       home: HomePage(),
     );
