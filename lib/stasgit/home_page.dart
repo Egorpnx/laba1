@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'supabase_page.dart';
 import 'prefs_page.dart';
+import 'registration_page.dart'; 
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -143,12 +144,12 @@ class MyHomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   Container(
-                    height: 100,
+                    height: 130, // увеличил высоту, чтобы поместить две кнопки
                     color: Colors.pink[100],
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text('SCROL'),
+                        const Text('Действия'),
                         const SizedBox(height: 8),
                         ElevatedButton(
                           onPressed: () {
@@ -158,7 +159,19 @@ class MyHomePage extends StatelessWidget {
                                   builder: (context) => const PrefsPage()),
                             );
                           },
-                          child: const Text('Перейти к SharedPreferences'),
+                          child: const Text('SharedPreferences'),
+                        ),
+                        const SizedBox(height: 8),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const RegistrationPage()),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+                          child: const Text('Форма регистрации'),
                         ),
                       ],
                     ),
